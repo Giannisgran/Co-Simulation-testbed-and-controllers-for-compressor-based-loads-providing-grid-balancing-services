@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: G. S. Ledva, I. M. Granitsas, O. Oyefeso, S. A. Nugroho, P. Phanivong, D. S. Callaway, I. A. Hiskens, J. L. Mathieu 
+title: "Co-Simulation testbed and controllers for compressor-based loads providing grid balancing services"
+version: 1.0.0
+doi: https://github.com/Giannisgran/Co-Simulation-testbed-and-controllers-for-compressor-based-loads-providing-grid-balancing-services
+date-released: 2023-03-30
