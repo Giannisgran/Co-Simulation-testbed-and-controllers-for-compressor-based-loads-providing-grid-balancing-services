@@ -38,7 +38,6 @@ The following three scripts need to be executed sequentially.
 * O. Oyefeso, University of Michigan
 * S. A. Nugroho, University of Michigan (now at Cummins, Inc.)
 * P. Phanivong, University of California at Berkeley
-* D. S. Callaway, University of California at Berkeley
 * I. A. Hiskens, University of Michigan
 * J. L. Mathieu , University of Michigan
 
