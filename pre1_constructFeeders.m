@@ -26,10 +26,10 @@
 %   this script to construct the necessary files. You don't need to specify
 %   two-factor case study construction here. 
 
-fprintf('Copyright (C) 2023 The Regents of the University of Michigan\n')
 % clear the workspace and command interface
 clc; clearvars;
 addpath(genpath(pwd)) % add folders and subfolders of the directory to path
+fprintf('Copyright (C) 2023 The Regents of the University of Michigan\n')
 rng(4234234)  % this will keep the total house number the same, since it is determined using Bernouli trials
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SELECT PARAMETERS AND SETTINGS

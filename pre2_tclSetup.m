@@ -34,9 +34,9 @@
 %   generate single cases or exhaustive conbinations of all parameters by
 %   setting the two-factor flag to 0. 
 
-fprintf('Copyright (C) 2023 The Regents of the University of Michigan\n')
 clearvars; clc; 
 addpath(genpath(pwd)) % add folders and subfolders of the directory to path
+fprintf('Copyright (C) 2023 The Regents of the University of Michigan\n')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SELECT OPTIONS (we don't sweep over these)
 
