@@ -1,0 +1,2 @@
+Every time the simulation finishes, results will be stored in this folder in the format: simulationData_YYMMDD_hhmm.mat
+Do not delete this folder.
