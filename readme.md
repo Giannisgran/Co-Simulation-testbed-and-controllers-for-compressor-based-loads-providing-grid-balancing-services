@@ -11,7 +11,7 @@ the distribution network down to the house nodes, and where the MATLAB code simu
 
 **NOTE:** If cloning the repository locally in a Windows machine fails due to the length of some file names, you can run Git Bash as an administrator and execute the command: git config --global core.longpaths true
 
-You will need to download the feeders from https://github.com/gridlab-d/Taxonomy_Feeders and unzip them into a folder called "Taxonomy_Feeders-master" located in the main directory of the project (the directory that includes the main_runSim script).
+You will first need to download the repo from https://github.com/gridlab-d/Taxonomy_Feeders and unzip it into a folder called "Taxonomy_Feeders-master" located in the main directory of this codebase (the directory that includes the main_runSim script).
 
 The following three scripts need to be executed sequentially. 
 1. pre1_constructFeeders: constructs a user-defined set of PNNL feeders from feeder files located in Taxonomy_Feeders.
