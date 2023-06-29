@@ -14,7 +14,11 @@ function [houseParameters, generalParameters, feederParameters, ...
     if simulationOptions.useGLD == 1
         thisData = load(['..\..\' folder '\feederAndTclData.mat' ]);
     else
-        thisData = load(['.\' folder '\feederAndTclData.mat' ]);
+        try
+            thisData = load(['.\' folder '\feederAndTclData.mat' ]);
+        catch exception
+            error('Feeder and TCL data have not been constructed. First run pre1_constructFeeders and then pre2_tclSetup before running main_runSim.')
+        end
     end
     
     percentTclOption = simulationOptions.percentTclOption;

@@ -20,6 +20,10 @@ file_to_extract = feederParameters.feederFile;
 taxonomy_directory = feederParameters.tax_dir;
 extraction_file = [taxonomy_directory, file_to_extract];
 
+if ~exist(taxonomy_directory, 'dir')  % check if the texonomy feeder has been downloaded
+    error('Taxonomy feeder folder not found. You need to download it from https://github.com/gridlab-d/Taxonomy_Feeders and unzip it inside a folder called Taxonomy_Feeders-master that should exist in the directory of pre1_constructFeeders.m.')
+end
+
 % manipulate the filename to extract by removing .glm, .'s, and replacing -
 % with '_'; add _arpaE suffix and .glm extension
 file2 = strrep(file_to_extract,'.glm','');

@@ -320,7 +320,12 @@ for idx1 = 1:num1
    
    % load feeder data for this feeder
    fileList = dir(['./' feeder4 '/feederData.mat']);
-   load(['./' feeder4 '/' fileList.name],'feederData')
+   try 
+       load(['./' feeder4 '/' fileList.name],'feederData')
+   catch exception
+       error('The desired feeder has not been constructed. Run pre1_constructFeeders.m first.')
+   end
+     
    
    % gets the field names of the structure, which contains all the
    % iterations of the feeder we're interested in
