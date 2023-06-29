@@ -44,7 +44,7 @@ timeStepInSec = 2; % [s]
 perc_2zone = 0; % must be between [0,1]
 
 % Directory that contains the taxonomy feeders listed above
-tax_dir = './Taxonomy_Feeders/';
+tax_dir = './Taxonomy_Feeders-Master/';
 
 % The PNNL feeders have different weather zones (6 of them, I think) for 
 % different areas of the US. This sets the region that we'll be using. 
