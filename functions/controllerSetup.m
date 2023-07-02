@@ -80,7 +80,6 @@ elseif strcmp(type,'Markov controller') || strcmp(type, 'Markov controller with 
         controllerInformation.controlSignalLength = numTempIntervals;
         controllerInformation.u_rel_mat = zeros(2*numTempIntervals, numSteps);
     elseif strcmp(type, 'Markov controller with lockouts') % control signal includes entries for both on and off states, but only for unlocked tcls 
-        error('Markov controller with lockouts is not yet debugged.')
         controllerInformation.controlSignalLength = 4*numTempIntervals;
         controllerInformation.u_rel_mat = zeros(4*numTempIntervals, numSteps);
     elseif strcmp(type, 'Markov controller with delays') % control signal includes on/off and delayed/not delayed
