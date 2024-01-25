@@ -127,17 +127,29 @@ elseif strcmp(controllerInformation.Type , 'Markov controller') || strcmp(contro
     if strcmp(controllerInformation.Type, 'Markov controller')
         controlActions.onOffSignal = u_rel(usefullBins);
         % keep the probabilities with respect to the bins This is used in Kalman instead of u_rel
-        controlActions.u = u_goal*ones(binModel.totalBinNumber,1);
-    elseif strcmp(controllerInformation.Type, 'Markov controller with lockouts') 
+        if controllerInformation.controlInputAssign == 1
+            controlActions.u = u_goal*ones(binModel.totalBinNumber,1);
+        elseif controllerInformation.controlInputAssign == 2
+            controlActions.u = u_goal*binModel.x;
+        end
+    elseif strcmp(controllerInformation.Type, 'Markov controller with lockouts')
         controlActions.onOffSignal = abs(u_rel);
         u_goal = abs(u_goal); % don't want negative probs for this one
         % keep the probabilities with respect to the bins This is used in Kalman instead of u_rel
-        controlActions.u = u_goal*ones(length(controlActions.onOffSignal),1);
+        if controllerInformation.controlInputAssign == 1
+            controlActions.u = u_goal*ones(binModel.totalBinNumber,1);
+        elseif controllerInformation.controlInputAssign == 2
+            controlActions.u = u_goal*binModel.x;
+        end
     elseif strcmp(controllerInformation.Type, 'Markov controller with delays')
         controlActions.onOffSignal = abs(u_rel);
         u_goal = abs(u_goal); % don't want negative probs for this one
         % keep the probabilities with respect to the bins This is used in Kalman instead of u_rel
-        controlActions.u = u_goal*ones(length(controlActions.onOffSignal),1);
+        if controllerInformation.controlInputAssign == 1
+            controlActions.u = u_goal*ones(binModel.totalBinNumber,1);
+        elseif controllerInformation.controlInputAssign == 2
+            controlActions.u = u_goal*binModel.x;
+        end
     end
     controlActions.u(uncontrolledBins) = 0; % zero probability at bins we don't control
     controlActions.u(uselessBins) = 0;
